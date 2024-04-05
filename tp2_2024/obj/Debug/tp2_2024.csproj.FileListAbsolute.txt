@@ -1,0 +1,11 @@
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\bin\Debug\tp2_2024.exe.config
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\bin\Debug\tp2_2024.exe
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\bin\Debug\tp2_2024.pdb
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.csproj.AssemblyReference.cache
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.csproj.SuggestedBindingRedirects.cache
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.Form1.resources
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.Properties.Resources.resources
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.csproj.GenerateResource.cache
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.csproj.CoreCompileInputs.cache
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.exe
+C:\Users\ignac\Documents\simulacion\tp2_2024\tp2_2024\tp2_2024\obj\Debug\tp2_2024.pdb
