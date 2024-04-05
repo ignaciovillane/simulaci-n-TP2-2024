@@ -78,19 +78,27 @@ namespace tp2_2024
             switch(cmbDistribucion.Text) 
             {
                 case "Exponencial":
-                    listaNro.Clear();
-                    listaNro = generador.generarExponencial((int)numericUpDownCantidad.Value, (double)numericUpDownLambda.Value);
-                    dgvNumerosRandom.DataSource= listaNro;
-                    listaFrecuencias.Clear();
-                    listaFrecuencias = generador.generarTablaDeFrecuencias(int.Parse(cmbIntervalos.Text), listaNro); 
-                    dgvTablaDeFrecuencias.DataSource=listaFrecuencias; 
-                    generador.graficar(chart1, listaFrecuencias);
+                   if((double)numericUpDownLambda.Value==0)
+                    {
+                        MessageBox.Show("Ingrese un valor de lambda mayor a cero: ");   
+                    }
+                   else
+                    {
+                        listaNro.Clear();
+                        listaNro = generador.generarExponencial((int)numericUpDownCantidad.Value, (double)numericUpDownLambda.Value);
+                        dgvNumerosRandom.DataSource = listaNro;
+                        listaFrecuencias.Clear();
+                        listaFrecuencias = generador.generarTablaDeFrecuencias(int.Parse(cmbIntervalos.Text), listaNro);
+                        dgvTablaDeFrecuencias.DataSource = listaFrecuencias;
+                        generador.graficar(chart1, listaFrecuencias);
+
+                    }
                     break;
                 case "Uniforme":
                     if((int)numericUpDownA.Value >= (int)numericUpDownB.Value)
                      {
                         MessageBox.Show("El valor de A debe ser menor al valor de B, ingrese los valores nuevamente");
-                        return;
+                        
                      }
                     else {
                         listaNro.Clear();
