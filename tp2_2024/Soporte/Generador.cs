@@ -46,6 +46,28 @@ namespace tp2_2024.Soporte
             }
             return rndNumbers;
         }
+        //Metodo para generar normal
+        //Metodo de convolucion
+        public List<TablaNumerosRandom> generarNormal(int n, double media, double desviacion)
+        {
+            List<TablaNumerosRandom> rndNumbers = new List<TablaNumerosRandom>();
+            for (int i = 0; i < n; i++)
+            {
+                int iteracion = i;
+                
+
+                // Generar número normalmente distribuido
+                double sum = 0;
+                for (int j = 0; j < 12; j++)
+                {
+                    sum += random.NextDouble();//sumo 12 numeros aleatorios
+                }
+                double normal = sum - 6;
+                double valor = ((normal ) * desviacion) + media;
+                rndNumbers.Add(new TablaNumerosRandom(iteracion, Truncar(sum, 4), Truncar(valor, 4)));
+            }
+            return rndNumbers;
+        }
 
 
         //Metodo de la tabla de frecuencias
@@ -85,6 +107,7 @@ namespace tp2_2024.Soporte
             // Crea una nueva serie para el histograma
             Series serie = new Series("Histograma");
             serie.ChartType = SeriesChartType.Column;
+            serie["PointWidth"] = "1"; // Establece el ancho de las columnas
             grafico.Titles.Add("Histograma de frecuencias");
             grafico.ChartAreas[0].AxisX.Title = "Valores";
             grafico.ChartAreas[0].AxisY.Title = "Frecuencia";
@@ -96,7 +119,9 @@ namespace tp2_2024.Soporte
                 double centroBarra = dato.Desde + (anchoBarra / 2.0);
 
                 // Agrega punto de datos para la barra
-                serie.Points.AddXY(centroBarra, dato.FrecuenciaObservada);
+                DataPoint dataPoint = new DataPoint(centroBarra, dato.FrecuenciaObservada);
+                dataPoint.Label = dato.FrecuenciaObservada.ToString(); // Establece el texto del label como la frecuencia observada
+                serie.Points.Add(dataPoint);
 
                 // Añade los límites de las barras como marcadores de división
                 grafico.ChartAreas[0].AxisX.CustomLabels.Add(

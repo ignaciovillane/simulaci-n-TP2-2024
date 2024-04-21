@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblDistribucion = new System.Windows.Forms.Label();
             this.cmbDistribucion = new System.Windows.Forms.ComboBox();
             this.lblIntervalos = new System.Windows.Forms.Label();
@@ -51,6 +51,10 @@
             this.dgvNumerosRandom = new System.Windows.Forms.DataGridView();
             this.dgvTablaDeFrecuencias = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnGenerarExcel = new System.Windows.Forms.Button();
+            this.lblTablaNumerosAleatorios = new System.Windows.Forms.Label();
+            this.lblTablaDeFrecuencias = new System.Windows.Forms.Label();
+            this.lblGrafico = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownLambda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).BeginInit();
@@ -74,10 +78,6 @@
             // cmbDistribucion
             // 
             this.cmbDistribucion.FormattingEnabled = true;
-            this.cmbDistribucion.Items.AddRange(new object[] {
-            "Exponencial",
-            "Uniforme",
-            "Normal"});
             this.cmbDistribucion.Location = new System.Drawing.Point(122, 13);
             this.cmbDistribucion.Name = "cmbDistribucion";
             this.cmbDistribucion.Size = new System.Drawing.Size(121, 28);
@@ -96,10 +96,6 @@
             // cmbIntervalos
             // 
             this.cmbIntervalos.FormattingEnabled = true;
-            this.cmbIntervalos.Items.AddRange(new object[] {
-            "5",
-            "10",
-            "15"});
             this.cmbIntervalos.Location = new System.Drawing.Point(122, 70);
             this.cmbIntervalos.Name = "cmbIntervalos";
             this.cmbIntervalos.Size = new System.Drawing.Size(121, 28);
@@ -238,25 +234,69 @@
             // 
             // chart1
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chart1.Legends.Add(legend6);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(369, 427);
             this.chart1.Name = "chart1";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Series1";
-            this.chart1.Series.Add(series6);
-            this.chart1.Size = new System.Drawing.Size(977, 453);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(1024, 531);
             this.chart1.TabIndex = 19;
             this.chart1.Text = "chart1";
+            // 
+            // btnGenerarExcel
+            // 
+            this.btnGenerarExcel.Location = new System.Drawing.Point(1525, 406);
+            this.btnGenerarExcel.Name = "btnGenerarExcel";
+            this.btnGenerarExcel.Size = new System.Drawing.Size(219, 48);
+            this.btnGenerarExcel.TabIndex = 20;
+            this.btnGenerarExcel.Text = "generar excel";
+            this.btnGenerarExcel.UseVisualStyleBackColor = true;
+            this.btnGenerarExcel.Click += new System.EventHandler(this.btnGenerarExcel_Click);
+            // 
+            // lblTablaNumerosAleatorios
+            // 
+            this.lblTablaNumerosAleatorios.AutoSize = true;
+            this.lblTablaNumerosAleatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTablaNumerosAleatorios.Location = new System.Drawing.Point(447, 13);
+            this.lblTablaNumerosAleatorios.Name = "lblTablaNumerosAleatorios";
+            this.lblTablaNumerosAleatorios.Size = new System.Drawing.Size(359, 32);
+            this.lblTablaNumerosAleatorios.TabIndex = 21;
+            this.lblTablaNumerosAleatorios.Text = "Tabla números aleatorios";
+            // 
+            // lblTablaDeFrecuencias
+            // 
+            this.lblTablaDeFrecuencias.AutoSize = true;
+            this.lblTablaDeFrecuencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTablaDeFrecuencias.Location = new System.Drawing.Point(1233, 13);
+            this.lblTablaDeFrecuencias.Name = "lblTablaDeFrecuencias";
+            this.lblTablaDeFrecuencias.Size = new System.Drawing.Size(298, 32);
+            this.lblTablaDeFrecuencias.TabIndex = 22;
+            this.lblTablaDeFrecuencias.Text = "Tabla de frecuencias";
+            // 
+            // lblGrafico
+            // 
+            this.lblGrafico.AutoSize = true;
+            this.lblGrafico.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrafico.Location = new System.Drawing.Point(843, 384);
+            this.lblGrafico.Name = "lblGrafico";
+            this.lblGrafico.Size = new System.Drawing.Size(113, 32);
+            this.lblGrafico.TabIndex = 23;
+            this.lblGrafico.Text = "Gráfico";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1898, 963);
+            this.Controls.Add(this.lblGrafico);
+            this.Controls.Add(this.lblTablaDeFrecuencias);
+            this.Controls.Add(this.lblTablaNumerosAleatorios);
+            this.Controls.Add(this.btnGenerarExcel);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.dgvTablaDeFrecuencias);
             this.Controls.Add(this.dgvNumerosRandom);
@@ -315,6 +355,10 @@
         private System.Windows.Forms.DataGridView dgvNumerosRandom;
         private System.Windows.Forms.DataGridView dgvTablaDeFrecuencias;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button btnGenerarExcel;
+        private System.Windows.Forms.Label lblTablaNumerosAleatorios;
+        private System.Windows.Forms.Label lblTablaDeFrecuencias;
+        private System.Windows.Forms.Label lblGrafico;
     }
 }
 
