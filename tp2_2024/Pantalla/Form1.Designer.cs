@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.lblDistribucion = new System.Windows.Forms.Label();
             this.cmbDistribucion = new System.Windows.Forms.ComboBox();
             this.lblIntervalos = new System.Windows.Forms.Label();
@@ -134,9 +134,19 @@
             // numericUpDownLambda
             // 
             this.numericUpDownLambda.Location = new System.Drawing.Point(113, 190);
+            this.numericUpDownLambda.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numericUpDownLambda.Name = "numericUpDownLambda";
             this.numericUpDownLambda.Size = new System.Drawing.Size(120, 26);
             this.numericUpDownLambda.TabIndex = 7;
+            this.numericUpDownLambda.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblMedia
             // 
@@ -150,6 +160,11 @@
             // numericUpDownMedia
             // 
             this.numericUpDownMedia.Location = new System.Drawing.Point(113, 236);
+            this.numericUpDownMedia.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numericUpDownMedia.Name = "numericUpDownMedia";
             this.numericUpDownMedia.Size = new System.Drawing.Size(120, 26);
             this.numericUpDownMedia.TabIndex = 9;
@@ -157,9 +172,19 @@
             // numericUpDownDesviacion
             // 
             this.numericUpDownDesviacion.Location = new System.Drawing.Point(113, 298);
+            this.numericUpDownDesviacion.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.numericUpDownDesviacion.Name = "numericUpDownDesviacion";
             this.numericUpDownDesviacion.Size = new System.Drawing.Size(120, 26);
             this.numericUpDownDesviacion.TabIndex = 10;
+            this.numericUpDownDesviacion.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblDesviacion
             // 
@@ -191,6 +216,16 @@
             // numericUpDownA
             // 
             this.numericUpDownA.Location = new System.Drawing.Point(113, 350);
+            this.numericUpDownA.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDownA.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            -2147483648});
             this.numericUpDownA.Name = "numericUpDownA";
             this.numericUpDownA.Size = new System.Drawing.Size(120, 26);
             this.numericUpDownA.TabIndex = 14;
@@ -198,6 +233,16 @@
             // numericUpDownB
             // 
             this.numericUpDownB.Location = new System.Drawing.Point(113, 406);
+            this.numericUpDownB.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
+            this.numericUpDownB.Minimum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            -2147483648});
             this.numericUpDownB.Name = "numericUpDownB";
             this.numericUpDownB.Size = new System.Drawing.Size(120, 26);
             this.numericUpDownB.TabIndex = 15;
@@ -234,16 +279,16 @@
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(369, 427);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(1024, 531);
             this.chart1.TabIndex = 19;
             this.chart1.Text = "chart1";

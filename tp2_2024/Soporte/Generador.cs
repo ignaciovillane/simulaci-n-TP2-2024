@@ -41,7 +41,7 @@ namespace tp2_2024.Soporte
             {
                 int iteracion = i;
                 double RND = random.NextDouble();
-                double numero = a + RND * (b - a);
+                double numero = a + (RND * (b - a));
                 rndNumbers.Add(new TablaNumerosRandom(iteracion, Truncar(RND,4), Truncar(numero,4)));
             }
             return rndNumbers;
@@ -82,14 +82,18 @@ namespace tp2_2024.Soporte
 
             double ancho = (diferencia / intervalos);
 
-            for (int i = 0; i <=intervalos; i++)
+            for (int i = 0; i <intervalos; i++)
             {
                 //cuando i ==0 Desde toma el valor min,cuando i > 0 tomar el valor Hasta 
-                double Desde = (i > 0 ? Truncar(tablaDeFrecuencias.Last().Hasta, 4) : minimo);
-                double Hasta = Truncar((Desde + ancho) - 0.001, 4);
-                double MarcaDeClase = Truncar(((Desde + Hasta) / 2), 4);
-                int FrecuenciaObservada = list.Count(x => x.numero >= Desde && x.numero < Hasta);
-                tablaDeFrecuencias.Add(new TablaDeFrecuencias(Desde, Hasta, MarcaDeClase, FrecuenciaObservada));
+                 
+                double Desde = (i > 0 ? tablaDeFrecuencias.Last().Hasta : minimo);
+
+                double Hasta = (Desde + ancho);
+
+                double MarcaDeClase = ((Desde + Hasta) / 2);
+
+                int FrecuenciaObservada = list.Count(x => x.numero >= Desde && x.numero <= Hasta);
+                tablaDeFrecuencias.Add(new TablaDeFrecuencias(Desde, Math.Round(Hasta,4), Math.Round(MarcaDeClase,4), FrecuenciaObservada));
 
             }
             return tablaDeFrecuencias;
